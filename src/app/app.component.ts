@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit {
+  constructor(private renderer: Renderer2) {
+  }
+  ngOnInit() {
+    this.addJsToElement('https://widgets.skyscanner.net/widget-server/js/loader.js').onload = () => {
+      console.log('SkyScanner Tag loaded');
+    }
+  }
+
+  addJsToElement(src: string): HTMLScriptElement {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = src;
+    this.renderer.appendChild(document.body, script);
+    return script;
+  }
 }

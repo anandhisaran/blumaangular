@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+<div class="columns">
+  <div class="column">
+  <p class="notification is-info">firt  column</p>
+  <div class="columns">
+  <div class="column">
+    <p class="notification is-danger">Child one</p>
+    <div class="columns is-mobile">
+      <div class="column"><p class="notification is-warning">1</p></div>
+      <div class="column"><p class="notification is-warning">2</p></div>
+      <div class="column"><p class="notification is-warning">3</p></div>
+      <div class="column"><p class="notification is-warning">4</p></div>
+    </div>
+  </div>
+  <div class="column">
+    <p class="notification is-danger">Child two</p>
+  </div>
+  <div class="column">
+    <p class="notification is-danger">Child three</p>
+  </div>
+  </div>
+  </div>
+
+  <div class="column">
+  <p class="notification is-danger">second column</p>
+  </div>
+  <div class="column">
+<p class="notification is-warning">third column</p>
+  </div>
+  <div class="column">
+<p class="notification is-info">fourth column</p>
+  </div>
+</div>
+<p>
+  about works!
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et convallis purus, a dignissim nunc. Donec ac purus iaculis,
+  iaculis purus sed, bibendum mauris. Mauris in ex sagittis, molestie leo sed, ullamcorper ex. Aliquam vitae vulputate mauris.
+  Cras a gravida lectus. Mauris ut lorem sed lectus cursus euismod. Duis turpis magna, placerat sed commodo feugiat, condimentum
+  sed ante. Morbi non purus ac nisl sollicitudin cursus eget ut leo. Etiam porttitor, lorem nec sollicitudin pulvinar, justo
+</p>
+<ul *ngFor="let person of people">
+  <li [ngStyle]="{'font-size.px':24}" [style.color]="getColor(person.country)">
+    {{ person.name }} ({{ person.country }})
+  </li>
+</ul>
+<div [ngStyle]="isTrue && {'background-color':'green'} || {'background-color': 'blue'}" 
+style="width:200px;height:100px;border:1px solid gray;">
+  </div>
+<p [ngStyle]="{ 'color': (value ? 'white' : 'red') }">Hello</p>
+<style scoped>
+  body 
+  {
+    background-color: #eee;
+  }
+  </style>

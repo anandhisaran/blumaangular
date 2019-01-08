@@ -1,0 +1,11 @@
+.bg_color 
+{
+ 
+        background: antiquewhite !important;
+    background-image: url(/src/assets/images/grey.png);
+}
+
+h3
+{
+    color:#ff5601;
+}
