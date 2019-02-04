@@ -23,16 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bulma-extensions/dist/css/bulma-extensions.min.css",
               "node_modules/bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css",
               "./src/assets/css/style.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-      "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.js"
+              "node_modules/bulma-extensions/dist/js/bulma-extensions.min.js",
+              "node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"
             ]
           },
           "configurations": {
@@ -85,7 +83,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.ico",            
               "src/assets"
             ]
           }
