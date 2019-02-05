@@ -7,63 +7,161 @@
 <h1  style="color:blue;">
   <a class="nav-link" routerLink="/progress">progress</a>
 </h1> -->
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="https://bulma.io/">
+        Home
       </a>
-  
-      <a role="button" class="navbar-burger" data-target="navbarBasicExample" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-menu" href="#">
+          Menu 1
         </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item"  routerLinkActive="active" routerLink="/">
-          Home
-        </a>
-  
-        <a class="navbar-item" routerLink="/about">
-          about
-        </a>
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
+        <div class="navbar-dropdown is-hidden-mobile is-boxed">
+          <a class="navbar-item" href="#">
+            Submenu 1
           </a>
-  
-          <div class="navbar-dropdown">
-            <a class="navbar-item" routerLink="/progress">
-                progress
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
+          <a class="navbar-item" href="#">
+            Submenu 2
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 3
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 4
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 5
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 6
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 7
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 8
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 9
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 10
+          </a>
+        </div>
+      </div> -->
+      
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">
+          Menu 2
+        </a>
+        <div class="navbar-dropdown is-hidden-mobile is-boxed">
+          <a class="navbar-item" href="#">
+            Submenu 1
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 2
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 3
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 4
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 5
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 6
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 7
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 8
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 9
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 10
+          </a>
         </div>
       </div>
-  
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
+      
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">
+          Menu 3
+        </a>
+        <div class="navbar-dropdown is-hidden-mobile is-boxed">
+          <a class="navbar-item" href="#">
+            Submenu 1
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 2
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 3
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 4
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 5
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 6
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 7
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 8
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 9
+          </a>
+          <a class="navbar-item" href="#">
+            Submenu 10
+          </a>
         </div>
       </div>
     </div>
-  </nav>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span>
+                Search
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
+              <span class="icon">
+                <i class="fa fa-download"></i>
+              </span>
+              <span>Logout</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
