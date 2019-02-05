@@ -42,15 +42,15 @@ export class HeaderComponent implements OnInit {
       
       });
       // Close mobile & tablet menu on item click
-       $('.navbar-item').each(function(e) { 
-         $(this).click(function(){ 
-           if($('#navbar-burger-id').hasClass('is-active')){ 
-             $('#navbar-burger-id').removeClass('is-active');
-              $('#navbar-menu-id').removeClass('is-active'); } }); }); 
+     
               // Open or Close mobile & tablet menu 
-              $('#navbar-burger-id').click(function () { if($('#navbar-burger-id').hasClass('is-active'))
-              { $('#navbar-burger-id').removeClass('is-active'); $('#navbar-menu-id').removeClass('is-active'); }
-              else { $('#navbar-burger-id').addClass('is-active'); $('#navbar-menu-id').addClass('is-active'); } });
+            //   $('#navbar-burger-id').click(function () { 
+            //     if($('#navbar-burger-id').hasClass('is-active'))
+            //   { $('#navbar-burger-id').removeClass('is-active'); 
+            //   $('#navbar-menu-id').removeClass('is-active'); }
+            //   else { $('#navbar-burger-id').addClass('is-active'); 
+            //   $('#navbar-menu-id').addClass('is-active'); } 
+            // });
       // var dropdown = document.querySelector('.dropdown');
       // dropdown.addEventListener('click', function(event) {
       //   event.stopPropagation();
@@ -64,17 +64,24 @@ export class HeaderComponent implements OnInit {
       // });
       // Check for click events on the navbar burger icon
       $(".navbar-burger").click(function() {
-    
+       
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           $(".navbar-burger").toggleClass("is-active");
           $(".navbar-menu").toggleClass("is-active");
     
       });
       $("#navbarExampleTransparentExample").click(function() {
-    
+        $(event.target).siblings('.navbar-dropdown')
+        .toggleClass('is-hidden-mobile');
+
+        $('.navbar-link')
+        .not($('.navbar-link').has($(event.target)))
+        .children('.navbar-dropdown')
+        .removeClass('is-hidden-mobile');
+
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-       $(".navbar-dropdown").toggleClass("is-active");
-        $(".navbar-dropdown").removeClass("is-hidden-mobile");
+     //  $(".navbar-dropdown").toggleClass("is-active");
+        $(".navbar-dropdown").toggleClass("is-hidden-mobile");
   
     });
     });
