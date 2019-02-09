@@ -5,14 +5,15 @@ import 'bulma'
 import 'bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css'
 import 'bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js'
 import 'bulma-extensions'
+import { HomeService } from '../_services/home.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
- 
-  constructor() { 
+  bgImageListArray: any;
+  constructor(private home: HomeService) { 
     
   }
   getColor(country) {
@@ -53,7 +54,12 @@ export class AboutComponent implements OnInit {
       // var carousels = bulmaCarousel.attach(); 
       // carousels now contains an array of all Carousel instances
   });
-   
+  this.ListBackgroundImageFront();
   }
-
+  ListBackgroundImageFront(){ 
+    /* List background images here.. */
+    this.home.ListBackgroundImageFront().subscribe(value => {
+          this.bgImageListArray = value.result;
+    });
+  }
 }

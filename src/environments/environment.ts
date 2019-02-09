@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  staging: false,
+  API_ENDPOINT: 'http://systimanx.xyz/jdsbrainwave-repo/api/public/api/',
+  LIST_BACKGROUND_IMAGE_FRONT: 'ListBackgroundImageFront'
 };
 
 /*
