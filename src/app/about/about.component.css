@@ -9,3 +9,11 @@ h3
 {
     color:#ff5601;
 }
+#tab-content .tabscustom {
+    display: none;
+  }
+  
+  #tab-content .tabscustom.is-active {
+    display: block;
+  }
+  

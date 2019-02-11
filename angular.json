@@ -23,14 +23,16 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bulma-extensions/dist/css/bulma-extensions.min.css",
+              "node_modules/bulma/bulma.sass",
+              "node_modules/bulma/sass/layout/section.sass",
               "node_modules/bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css",
+            
               "./src/assets/css/style.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bulma-extensions/dist/js/bulma-extensions.min.js",
               "node_modules/bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js"
+              
             ]
           },
           "configurations": {

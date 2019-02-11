@@ -6,6 +6,7 @@ import 'bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css'
 import 'bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js'
 import 'bulma-extensions'
 import { HomeService } from '../_services/home.service';
+import { CardService  } from '../_services/card.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -13,7 +14,8 @@ import { HomeService } from '../_services/home.service';
 })
 export class AboutComponent implements OnInit {
   bgImageListArray: any;
-  constructor(private home: HomeService) { 
+  ListCardImgText: any;
+  constructor(private home: HomeService, private card: CardService) { 
     
   }
   getColor(country) {
@@ -50,12 +52,31 @@ export class AboutComponent implements OnInit {
     }
   ];
   ngOnInit() {
+    $("#showModal").click(function() {
+      $(".modal").addClass("is-active");  
+    });
+    
+    $(".modal-close").click(function() {
+       $(".modal").removeClass("is-active");
+    });
+    $(document).ready(function() {
+      $('#tabs li').on('click', function() {
+        var tab = $(this).data('tab');
+    
+        $('#tabs li').removeClass('is-active');
+        $(this).addClass('is-active');
+    
+        $('#tab-content .tabscustom').removeClass('is-active');
+        $('.tabscustom[data-content="' + tab + '"]').addClass('is-active');
+      });
+    });
     $(document).ready(function(){
-      // var carousels = bulmaCarousel.attach(); 
+       // var carousels = bulmaCarousel.attach(); 
       // carousels now contains an array of all Carousel instances
   });
   this.ListBackgroundImageFront();
   }
+ 
   ListBackgroundImageFront(){ 
     /* List background images here.. */
     this.home.ListBackgroundImageFront().subscribe(value => {

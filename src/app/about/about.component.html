@@ -2,9 +2,7 @@
 <!-- <script type="text/javascript" 
 src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script> -->
 <!-- banner start -->
-<h1>refer for banners 
-  <a href="https://wikiki.github.io/components/carousel/">go link</a>
-</h1>
+
 <div class="columns">
 <div class='carousel carousel-animated carousel-animate-slide'>
   <div class='carousel-container'>
@@ -48,6 +46,8 @@ src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"><
 </div>
 <!-- banner end -->
 <!-- center div start -->
+<div class="columns">
+    <div class="column">
 <nav class="level is-mobile">
     <div class="level-item has-text-centered">
       <div>
@@ -74,29 +74,40 @@ src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"><
       </div>
     </div>
   </nav>
+</div>
+</div>
 <!-- center div end -->
 <!-- nav tab start -->
-<div class="tabs is-centered">
+<div class="container"> 
+<div class="columns"> 
+<div class="column is-12 has-background-danger">
+<h1 class="has-text-white has-text-weight-bold">
+  This is tabs examples in bulma (this block using column is-12)
+</h1>
+</div>
+</div>
+    <div class="tabs is-toggle is-centered tabs-toggle-link-hover-background-color" 
+    id="tabs">
     <ul>
-      <li class="is-active">
+      <li class="is-active" data-tab="1">
         <a>
           <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
           <span>Pictures</span>
         </a>
       </li>
-      <li>
+      <li data-tab="2">
         <a>
           <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
           <span>Music</span>
         </a>
       </li>
-      <li>
+      <li data-tab="3">
         <a>
           <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
           <span>Videos</span>
         </a>
       </li>
-      <li>
+      <li data-tab="4">
         <a>
           <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
           <span>Documents</span>
@@ -104,8 +115,101 @@ src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"><
       </li>
     </ul>
   </div>
+  <div id="tab-content" class="is-centered">
+      <div class="container">
+    <div class="is-active tabscustom has-background-warning hero-body hero-buttons" data-content="1">
+    <p>
+      This outer space using "hero-body"
+      and hero-buttons using magin top space
+    </p>
+  </div>
+  <div class="tabscustom has-background-warning hero-body hero-buttons" data-content="2">
+    <p>
+      Music
+    </p>
+    </div>
+    <div class="tabscustom has-background-warning hero-body hero-buttons" data-content="3">
+    <p>
+      Videos
+    </p>
+    </div>
+    <div class="tabscustom has-background-warning hero-body  hero-buttons" data-content="4">
+    <p>
+      Documents
+    </p>
+    </div>
+  </div>
+  </div>
 <!-- nav tab end -->
+
+<!-- nav tab verticall start -->
+<div class="columns"> 
+    <div class="column is-12 has-background-danger">
+    <h1 class="has-text-white has-text-weight-bold">
+      This is tabs verticall examples in bulma (this block using column is-12)
+    </h1>
+    </div>
+    </div>
+    <div class="columns">
+        <div class="tabs verticall_tab is-toggle is-centered tabs-toggle-link-hover-background-color is-2 column" 
+        id="tabs">
+        <ul>
+          <li class="is-active" data-tab="11">
+            <a>
+              <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+              <span>verticall one</span>
+            </a>
+          </li>
+          <li data-tab="12">
+            <a>
+              <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+              <span>verticall two</span>
+            </a>
+          </li>
+          <li data-tab="13">
+            <a>
+              <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+              <span>verticall three</span>
+            </a>
+          </li>
+          <li data-tab="14">
+            <a>
+              <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+              <span>verticall four</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="tab-content" class="is-centered is-12 column">
+          <div class="container">
+        <div class="is-active tabscustom has-background-warning hero-body hero-buttons" data-content="11">
+        <p>
+            verticall one content
+        </p>
+      </div>
+      <div class="tabscustom has-background-warning hero-body hero-buttons" data-content="12">
+        <p>
+            verticall two content
+        </p>
+        </div>
+        <div class="tabscustom has-background-warning hero-body hero-buttons" data-content="13">
+        <p>
+            verticall three content
+        </p>
+        </div>
+        <div class="tabscustom has-background-warning hero-body  hero-buttons" data-content="14">
+        <p>
+            verticall four content
+        </p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+    <!-- nav tab verticall end -->
 <!-- search start -->
+<div class="columns">
+  <div class="column">
 <nav class="panel">
     <p class="panel-heading">
       repositories
@@ -171,40 +275,28 @@ src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"><
       </button>
     </div>
   </nav>
-<!-- search end -->
-<!-- modal start -->
-<button class="button is-primary is-large modal-button is-active" data-target="modal" aria-haspopup="true">Launch example modal</button>
+</div>
+<!-- second start -->
+<div class="column">
+  <!-- modal start -->
+<button class="button is-primary is-large modal-button is-active" 
+data-target="modal" aria-haspopup="true" id="showModal">Launch example modal</button>
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
       <!-- Any other Bulma elements you want -->
+      <p class="has-text-white has-background-primary">this is modal poup</p>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 <!-- modal end -->
-<div class="columns">
-  <!-- <div class="column">
-  <p class="notification is-info">firt  column</p>
-  <div class="columns">
-  <div class="column">
-    <p class="notification is-danger">Child one</p>
-    <div class="columns is-mobile">
-      <div class="column"><p class="notification is-warning">1</p></div>
-      <div class="column"><p class="notification is-warning">2</p></div>
-      <div class="column"><p class="notification is-warning">3</p></div>
-      <div class="column"><p class="notification is-warning">4</p></div>
-    </div>
   </div>
-  <div class="column">
-    <p class="notification is-danger">Child two</p>
-  </div>
-  <div class="column">
-    <p class="notification is-danger">Child three</p>
-  </div>
-  </div>
-  </div> -->
+  <!-- second end -->
+</div>
+<!-- search end -->
 
-  <div class="column">
+<div class="columns">
+    <div class="column">
   <p class="notification is-danger">second column</p>
   </div>
   <div class="column">
@@ -214,25 +306,133 @@ src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"><
 <p class="notification is-info">fourth column</p>
   </div>
 </div>
-<p>
-  about works!
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et convallis purus, a dignissim nunc. Donec ac purus iaculis,
-  iaculis purus sed, bibendum mauris. Mauris in ex sagittis, molestie leo sed, ullamcorper ex. Aliquam vitae vulputate mauris.
-  Cras a gravida lectus. Mauris ut lorem sed lectus cursus euismod. Duis turpis magna, placerat sed commodo feugiat, condimentum
-  sed ante. Morbi non purus ac nisl sollicitudin cursus eget ut leo. Etiam porttitor, lorem nec sollicitudin pulvinar, justo
-</p>
-<ul *ngFor="let person of people">
-  <li [ngStyle]="{'font-size.px':24}" [style.color]="getColor(person.country)">
-    {{ person.name }} ({{ person.country }})
-  </li>
-</ul>
-<div [ngStyle]="isTrue && {'background-color':'green'} || {'background-color': 'blue'}" 
-style="width:200px;height:100px;border:1px solid gray;">
+<!-- cards block start -->
+<div class="container">
+<div class="columns">
+        <!-- card one start -->
+    <div class="column">
+<div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Component
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">        
+<figure class="is-marginless">
+<img src="assets/images/proejctbanner.png" class="image is-96x96"/>
+</figure>
+        <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+        <br>
+        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a href="#" class="card-footer-item">Save</a>
+      <a href="#" class="card-footer-item">Edit</a>
+      <a href="#" class="card-footer-item">Delete</a>
+    </footer>
   </div>
-<p [ngStyle]="{ 'color': (value ? 'white' : 'red') }">Hello</p>
-<style scoped>
-  body 
-  {
-    background-color: #eee;
-  }
-  </style>
+</div>
+  <!-- card one end -->
+   <!-- card two start -->
+   <div class="column">
+<div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Component
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">        
+<figure class="is-marginless">
+<img src="assets/images/proejctbanner.png" class="image is-96x96"/>
+</figure>
+        <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+        <br>
+        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a href="#" class="card-footer-item">Save</a>
+      <a href="#" class="card-footer-item">Edit</a>
+      <a href="#" class="card-footer-item">Delete</a>
+    </footer>
+  </div> 
+</div>
+  <!-- card two end -->
+   <!-- card three start -->
+   <div class="column">
+      <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Component
+            </p>
+            <a href="#" class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="content">        
+      <figure class="is-marginless">
+      <img src="assets/images/proejctbanner.png" class="image is-96x96"/>
+      </figure>
+              <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item">Save</a>
+            <a href="#" class="card-footer-item">Edit</a>
+            <a href="#" class="card-footer-item">Delete</a>
+          </footer>
+        </div> 
+      </div>
+        <!-- card three end -->
+         <!-- card four start -->
+   <div class="column">
+      <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Component
+            </p>
+            <a href="#" class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="content">        
+      <figure class="is-marginless">
+      <img src="assets/images/proejctbanner.png" class="image is-96x96"/>
+      </figure>
+              <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item">Save</a>
+            <a href="#" class="card-footer-item">Edit</a>
+            <a href="#" class="card-footer-item">Delete</a>
+          </footer>
+        </div> 
+      </div>
+        <!-- card four end -->
+</div>
+</div>
+<!-- cards block start -->

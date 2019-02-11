@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   staging: false,
   API_ENDPOINT: 'http://systimanx.xyz/jdsbrainwave-repo/api/public/api/',
-  LIST_BACKGROUND_IMAGE_FRONT: 'ListBackgroundImageFront'
+  LIST_BACKGROUND_IMAGE_FRONT: 'ListBackgroundImageFront',
+  LIST_CARD_IMAGE_TEXT: 'ListCardImgText'
 };
 
 /*
