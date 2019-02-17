@@ -16,4 +16,9 @@ h3
   #tab-content .tabscustom.is-active {
     display: block;
   }
-  
+  #element-toggle {
+    display: none;
+  }
+  #element-toggle:checked ~ #myModal {
+    display: flex;
+  }

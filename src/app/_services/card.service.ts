@@ -20,7 +20,11 @@ import { throwError } from 'rxjs';
 })
 export class CardService {
   constructor(private http: HttpClient) { }
-  ListCardImgText(): any{
-      return this.http.get(environment.API_ENDPOINT + environment.LIST_CARD_IMAGE_TEXT);
-  }
+  // GetPortfolioImagesFront(): any{
+  //     return this.http.post(environment.API_ENDPOINT + environment.GET_PORTFOLIO_IMAGE_FRONT);
+  // }
+  GetPortfolioImageFront(value): any{
+    return this.http.post(environment.API_ENDPOINT + environment.GET_PORTFOLIO_IMAGE_FRONT, value);
+}
+
 }

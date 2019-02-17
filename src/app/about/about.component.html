@@ -45,6 +45,95 @@ src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"><
 </div>
 </div>
 <!-- banner end -->
+<!-- three image start -->
+<!-- <div *ngFor="let cardget of listcardimgarray">
+  <img src="{{cardget.imageName}}"/>
+</div> -->
+
+<div class="columns is-gapless is-marginless is-multiline">
+  <div class="column is-4 is-narrow" *ngFor="let cardget of listcardimgarray">
+    <a href="/work">
+    <img src="{{cardget.imageName}}"/>
+  </a>
+</div>
+<!-- <div class="column">
+    <img src="https://www.w3schools.com/w3images/wedding.jpg"/>
+</div>
+<div class="column">
+    <img src="https://www.w3schools.com/w3images/wedding.jpg"/>
+</div>
+  </div> -->
+  <!-- <div class="columns is-gapless">
+      <div class="column">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg"/>
+    </div>
+    <div class="column">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg"/>
+    </div>
+    <div class="column">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg"/>
+    </div>
+      </div> -->
+</div>
+<!-- three image end-->
+<!-- jobs start -->
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+        <div class="columns is-narrow  is-multiline">
+      <div class="column is-4" *ngFor="let jobs of getjobsarray">
+        <div class="card">
+          <header class="card-header">
+          <div class="card-header-title">
+           <h1 class="is-size-3">{{jobs.jobTitle}}</h1> 
+          </div>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>
+             Job location: {{jobs.countryName}}
+            </p>
+            <p>
+              Job Position: {{jobs.jobPositionTxt}}
+            </p>
+            <a href="{{jobs.jobsId}}"> 
+            <label class="button" for="element-toggle">Apply modal</label>  
+          </a>       
+                <input id="element-toggle" type="checkbox" />              
+            <!-- <p><a href="{{jobs.jobsId}}">Aplly now</a></p> -->
+            <div class="modal" id="myModal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                  <!-- Any other Bulma elements you want -->
+                  <p class="modal-card-title">                   
+                    {{jobs.jobTitle}}
+                    {{jobs.jobsId}}
+                  </p>
+              </header>
+              <section class="modal-card-body">
+                  <p> {{jobs.jobDescription}}</p>
+              </section>
+              <footer class="modal-card-foot">
+                  <button class="button">Cancel</button>
+                </footer>
+                </div>
+                <label class="modal-close is-large" for="element-toggle"></label>
+              </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+        <!-- <div *ngFor="let jobs of getjobsarray">
+          <p>{{jobs.jobTitle}}</p>
+        </div> -->
+    </div>
+  </div>
+</section>
+
+
+<!-- jobs end -->
 <!-- center div start -->
 <div class="columns">
     <div class="column">
@@ -284,7 +373,7 @@ data-target="modal" aria-haspopup="true" id="showModal">Launch example modal</bu
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <!-- Any other Bulma elements you want -->
+       Any other Bulma elements you want 
       <p class="has-text-white has-background-primary">this is modal poup</p>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>

@@ -22,5 +22,8 @@ export class HomeService {
   constructor(private http: HttpClient) { }
   ListBackgroundImageFront(): any{
       return this.http.get(environment.API_ENDPOINT + environment.LIST_BACKGROUND_IMAGE_FRONT);
+  };
+  ListJobsFront(): any {
+return this.http.get(environment.API_ENDPOINT + environment.GET_JOBS_LIST);
   }
 }

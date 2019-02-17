@@ -7,6 +7,7 @@ import 'bulma-extensions/bulma-carousel/dist/js/bulma-carousel.min.js'
 import 'bulma-extensions'
 import { HomeService } from '../_services/home.service';
 import { CardService  } from '../_services/card.service';
+import { ValueTransformer } from '@angular/compiler/src/util';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -14,8 +15,9 @@ import { CardService  } from '../_services/card.service';
 })
 export class AboutComponent implements OnInit {
   bgImageListArray: any;
-  ListCardImgText: any;
-  constructor(private home: HomeService, private card: CardService) { 
+  listcardimgarray: any;
+  getjobsarray: any;
+  constructor(private home: HomeService, private cardimg: CardService) { 
     
   }
   getColor(country) {
@@ -52,6 +54,7 @@ export class AboutComponent implements OnInit {
     }
   ];
   ngOnInit() {
+    
     $("#showModal").click(function() {
       $(".modal").addClass("is-active");  
     });
@@ -75,12 +78,26 @@ export class AboutComponent implements OnInit {
       // carousels now contains an array of all Carousel instances
   });
   this.ListBackgroundImageFront();
+  this.GetPortfolioImageFront();
+  this.ListJobsFront();
   }
  
   ListBackgroundImageFront(){ 
     /* List background images here.. */
     this.home.ListBackgroundImageFront().subscribe(value => {
           this.bgImageListArray = value.result;
+    });
+  };
+  GetPortfolioImageFront() {
+    const cardimages = {  isHomePage : 1  };
+this.cardimg.GetPortfolioImageFront(cardimages).subscribe(value=> {
+  this.listcardimgarray = value.result;
+});
+  };
+  ListJobsFront(){
+    this.home.ListJobsFront().subscribe(value => {
+      this.getjobsarray = value.result;
+      console.log(this.getjobsarray);
     });
   }
 }
