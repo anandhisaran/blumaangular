@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  $ from 'jquery';
+import { NavigationExtras } from '@angular/router';
 import bulmaCarousel from 'bulma-extensions';
 import 'bulma'
 import 'bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css'
@@ -17,6 +18,8 @@ export class AboutComponent implements OnInit {
   bgImageListArray: any;
   listcardimgarray: any;
   getjobsarray: any;
+  Applyjob:any;
+  isModalActive: boolean = false;
   constructor(private home: HomeService, private cardimg: CardService) { 
     
   }
@@ -81,12 +84,33 @@ export class AboutComponent implements OnInit {
   this.GetPortfolioImageFront();
   this.ListJobsFront();
   }
- 
+  toggleModal() {
+    this.isModalActive = !this.isModalActive;
+  }
   ListBackgroundImageFront(){ 
     /* List background images here.. */
     this.home.ListBackgroundImageFront().subscribe(value => {
           this.bgImageListArray = value.result;
     });
+  };
+  /* Apply Job Form redirect */
+  ApplyJob(data){
+     console.log(data);
+    //  const modalRef= this.home.ListJobsFront();
+    //  modalRef.componentInstance = this.ListJobsFront;
+    
+      // const modalRef = this.home.ListJobsFront();
+      // modalRef.componentInstance.jobs = this.ListJobsFront;
+  
+  //  const activeModal = this.home.ListJobsFront();
+  //  activeModal.componentInstance.jobs = this.ListJobsFront;
+  //  activeModal.componentInstance.passEntry.subscribe((receivedEntry) => {
+  //   console.log(receivedEntry);
+   
+    //  const getjobsarray = activeModal;
+    //  console.log(getjobsarray);
+   //  modalRef.jobtitle = 'About';
+   // this._router.navigate(['/apply-job'], navigationExtras);
   };
   GetPortfolioImageFront() {
     const cardimages = {  isHomePage : 1  };
